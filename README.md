@@ -4,7 +4,7 @@ A small, reproducible test: does gitleaks v8.30.1 find synthetic OpenAI API keys
 
 ## Result
 
-With its default config, gitleaks v8.30.1 finds **0 of 1,000** keys of each tested shape when the key is followed by `&` (a URL query), `)` (a markdown link) or `,`. With a space, a quote or the end of the line after the key, the same keys are found.
+With its default config, gitleaks v8.30.1 finds **0 of 1,000** keys of each of the two shapes its `openai-api-key` rule describes when the key is followed by `&` (a URL query), `)` (a markdown link) or `,`. With a space, a quote or the end of the line after the key, the same keys are found.
 
 | shape \ what follows the key | end of line | `"` (JSON) | space (table) | `&` (query) | `)` (markdown link) | `,` |
 |---|---|---|---|---|---|---|
